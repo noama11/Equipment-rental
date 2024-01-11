@@ -10,9 +10,9 @@ import lightS from "./assets/lightS.svg";
 // import light from "public/light.png";
 
 // const light1 = "public/light.png";
-const light2 = "public/light2.png";
-const marshelUrl = "public/marshel2.png"
-const gen1 = "public/gen1.png";
+const light2 = "/light2.png";
+const marshelUrl = "/marshel2.png"
+const gen1 = "/gen1.png";
 //-----------------Hero Page---------------------
 export const heroTitle = "השכרת ציוד לאירועים";
 export const heroSubtitle =
@@ -230,13 +230,13 @@ export const testimonials = [
         text: "מעולם לא פגשתי מפתח אינטרנט שבאמת אכפת לו מהצלחת הלקוחות שלהם כמו שריק עושה"
     },
     {
-        image: "/public/man_1.png",
+        image: "/man_1.png",
         occupation: "Manager",
         name: "Lior shukrun",
         text: "לאחר שריק ביצע אופטימיזציה לאתר שלנו, התנועה שלנו גדלה ב-50%. אנחנו לא יכולים להודות להם מספיק!"
     },
     {
-        image: "/public/man_2.png",
+        image: "//man_2.png",
         occupation: "Manager",
         name: "Tal Levi",
         text: "חשבתי שאי אפשר לעשות אתר יפה כמו המוצר שלנו, אבל ריק הוכיח שאני טועה."

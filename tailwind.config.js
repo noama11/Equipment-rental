@@ -24,7 +24,7 @@ export default {
         "2xl": "1280px",
       },
       backgroundImage: {
-        "eventBack": "url('/public/event1.jpg')",
+        "eventBack": "url('/event1.jpg')",
       },
     },
   },

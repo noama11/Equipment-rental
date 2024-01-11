@@ -49,7 +49,7 @@ const Testimonials = () => {
                 <div className="flex flex-col-reverse md:flex-row md:gap-x-10 gap-y-2">
                     {/* {image} */}
                     <div className="">
-                        <img className='border rounded-lg shadow' src="public/event2.jpg" alt="image3" />
+                        <img className='border rounded-lg shadow' src="/event2.jpg" alt="image3" />
                     </div>
                     <div className="xl:max-w-[50%]  mb-4">
                         {/* {title} */}
