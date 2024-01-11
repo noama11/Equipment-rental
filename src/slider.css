@@ -1,0 +1,79 @@
+.productSlider .swiper-pagination-bullet {
+    background: #23262f;
+}
+
+.productSlider .swiper-button-prev,
+.productSlider .swiper-button-next {
+    background: #23262f;
+    box-shadow: 0px 4px 10px rgba(15, 27, 51, 0.1);
+    top: 90%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 20;
+
+}
+
+.testimonialsSlider .swiper-button-prev,
+.testimonialsSlider .swiper-button-next {
+    background: #23262f;
+    box-shadow: 0px 4px 10px rgba(15, 27, 51, 0.1);
+    top: 85%;
+    /* Set position to absolute */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 20;
+    transform: rotate(180deg);
+
+}
+
+.testimonialsSlider .swiper-button-prev {
+    left: 85%;
+
+
+}
+
+.testimonialsSlider .swiper-button-next {
+    left: 72%;
+
+}
+
+.productSlider .swiper-button-prev:hover,
+.productSlider .swiper-button-next:hover,
+.testimonialsSlider .swiper-button-prev:hover,
+.testimonialsSlider .swiper-button-next:hover {
+    background: #286f6c;
+    transition: all 0.25s ease-in-out;
+}
+
+.productSlider .swiper-button-prev {
+    left: 40%;
+}
+
+.productSlider .swiper-button-next {
+    right: 40%;
+}
+
+
+
+.productSlider .swiper-button-prev:after,
+.productSlider .swiper-button-next:after,
+.testimonialsSlider .swiper-button-prev:after,
+.testimonialsSlider .swiper-button-next:after {
+    font-size: 16px;
+    color: white;
+}
+
+
+
+/* For screens smaller than xl */
+@media (max-width: 1180px) {
+
+    .productSlider .swiper-pagination-bullet,
+    .productSlider .swiper-button-prev,
+    .productSlider .swiper-button-next {
+        display: none;
+        /* Hide the buttons */
+    }
+}
