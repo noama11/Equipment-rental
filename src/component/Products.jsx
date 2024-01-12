@@ -52,7 +52,7 @@ const Products = () => {
     return (
         <div
             id="products"
-            className="flex flex-col gap-[128px] 2xl:gap-2 py-12 2xl:mt-[270px]  max-w-[1490px]
+            className="flex flex-col gap-[128px] 2xl:gap-2 py-12 mt-20 2xl:mt-[270px]  max-w-[1490px]
           mx-auto px-10 w-full "
         >
             {/* <div className="hidden md:flex mx-auto md:flex-row gap-[160px] md:gap-6">

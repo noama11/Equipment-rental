@@ -41,7 +41,6 @@ const Stats = () => {
 
 
 const Home = ({ toggle }) => {
-    const navigate = useNavigate();
 
     return (
         <>
