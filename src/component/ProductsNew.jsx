@@ -148,7 +148,7 @@ const ProductsNew = () => {
     // subtitle: text-[18px] xl:text-[20px] leading-relaxed mb-5 lg:mb-9
 
     return (
-        <section className="relative text-center">
+        <section className="relative text-center py-12 md:py-16">
             <div className="container mx-auto ">
                 <section className="py-16 bg-white">
 

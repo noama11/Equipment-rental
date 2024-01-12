@@ -17,7 +17,7 @@ const gen1 = "/gen1.png";
 export const heroTitle = "השכרת ציוד לאירועים";
 export const heroSubtitle =
     "הפוך את חלומות האירוע שלך למציאות עם מלאי ההשכרה המוביל שלנו";
-export const heroButton = "Shop Now"
+export const heroButton = "צור קשר"
 
 export const stats = [
     {

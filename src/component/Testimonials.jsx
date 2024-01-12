@@ -44,7 +44,7 @@ const TestSlider = () => {
 
 const Testimonials = () => {
     return (
-        <section className="relative ">
+        <section className="relative py-12 md:py-16 ">
             <div className="container mx-auto ">
                 <div className="flex flex-col-reverse md:flex-row md:gap-x-10 gap-y-2">
                     {/* {image} */}

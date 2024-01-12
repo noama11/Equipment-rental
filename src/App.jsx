@@ -25,35 +25,36 @@ import StarsCanvas from './component/Stars.jsx'
 
 function AppRoute() {
   return (
-    <>
+    <div className=''>
       <Navbar />
 
       <div id="home" className="bg-eventBack bg-no-repeat bg-cover">
         <Home />
+
       </div>
 
-      <div className="pt-[200px] md:pt-[70px]">
+      <div className=" ">
         <span className='hash-span' id="products">
           &nbsp;
         </span>
         <Products />
       </div>
 
-      <div className="section">
+      <div className="">
         <span className='hash-span' id="reference">
           &nbsp;
         </span>
         <Reference />
       </div>
 
-      <div className="section">
+      <div className="">
         <span className='hash-span' id="allProducts">
           &nbsp;
         </span>
         <ProductsNew />
       </div>
 
-      <div className="section pb-60">
+      <div className="section ">
         <span className='hash-span' id="testimonials">
           &nbsp;
         </span>
@@ -64,7 +65,9 @@ function AppRoute() {
         <Contact />
         <StarsCanvas />
       </div>
-    </>
+
+
+    </div>
   )
 }
 

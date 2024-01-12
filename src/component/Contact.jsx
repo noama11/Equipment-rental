@@ -54,7 +54,7 @@ const Contact = () => {
     }
 
     return (
-        <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden bg-black">
+        <div className="md:py-16 py-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden bg-black">
             {/* flex-[0.75] meaning that we want to take 3/4 of the screen */}
             <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
                 className="flex-[0.75] bg-[#472c4c] p-8 rounded-2xl"

@@ -13,6 +13,7 @@ import ProductsNew from "./ProductsNew"
 import { useNavigate } from "react-router-dom";
 import Reference from "./Reference";
 import Testimonials from "./Testimonials";
+import Navbar from "./Navbar";
 
 
 const Stats = () => {
@@ -45,8 +46,9 @@ const Home = ({ toggle }) => {
     return (
         <>
             <div id="home" className=" ">
-                <section className="relative w-full h-screen mx-auto    section   bg-black/70">
+                <section className="relative w-full h-screen mx-auto py-10 md:py-16 bg-black/70">
                     <div className="container mx-auto text-center">
+
 
                         <FadeIn delay={0.2} direction="down" padding fullWidth>
                             <h1 className="mt-[90px] text-center text-5xl font-semibold leading-tight xs:text-[80px] text-white max-w-[1050px]">
@@ -59,7 +61,7 @@ const Home = ({ toggle }) => {
                             </h5>
                         </FadeIn>
                         <FadeIn delay={0.2} direction="up" padding fullWidth>
-                            <a href="#products" className="relative w-full xs:w-[200px] mt-11 text-white text-2xl flex justify-center rounded-md bg-[rgba(255,255,255,0.4)]  cursor-pointer hover:bg-[rgba(255,255,255,0.5)] px-[35px] py-[9px] mb-[160px] backdrop:blur-md
+                            <a href="#contact" className="relative w-full xs:w-[200px] mt-11 text-white text-2xl flex justify-center rounded-md bg-[rgba(255,255,255,0.4)]  cursor-pointer hover:bg-[rgba(255,255,255,0.5)] px-[35px] py-[9px] mb-[160px] backdrop:blur-md
                     transition lg:px-[80px] lg:py-[16px] lg:mb-[194px]"
                             >
                                 {heroButton}
@@ -71,7 +73,7 @@ const Home = ({ toggle }) => {
                     </FadeIn> */}
 
                         {/* <div className="absolute h-[60px] xs:h-[150px] bottom-0 w-full bg-[linear-gradient(180deg,_#ffffff00_0%,_#FFF_100%)]" /> */}
-                        <div className="relative  z-20">
+                        <div className="relative mt-10  z-20">
                             <Stats />
                         </div>
 

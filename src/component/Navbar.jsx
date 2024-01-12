@@ -116,100 +116,84 @@ const Navbar = () => {
     const [color, setColor] = useState('transparent');
     const [textColor, setTextColor] = useState('white');
     const [navBack, setNavBack] = useState('transparent');
-    useEffect(() => {
-        const changeColor = () => {
-            // if (window.scrollY >= 1700) {
 
-            //     setColor('black');
-            //     setTextColor('white');
-            // }
-            if (window.scrollY >= 90) {
-                setColor('#040402');
-                setTextColor('white');
-                setNavBack('dark');
-            }
-            // else {
-            //     setColor('transparent');
-            //     setTextColor('white');
-            // }
-        };
-        window.addEventListener('scroll', changeColor);
-    }, []);
     return (
-        <>
 
-            <nav
-                style={{ backgroundColor: `${color}` }} className='w-full  px-32 py-6 flex items-center justify-between mx-auto fixed z-40 top-0 text-white'>
-                <div className='flex items-center justify-center flex-wrap '>
-                    <Link to={"/"}
-                        className='flex items-center justify-center'
-                        whileHover={{ y: -2 }}
+
+        <nav
+            className='w-full bg-[#040402] px-20 py-6 flex items-center justify-between mx-auto fixed z-40 top-0 text-white'>
+            <div className='flex flex-1 items-center justify-start flex-wrap '>
+                <Link to={"/"}
+                    className='flex items-center justify-center'
+                    whileHover={{ y: -2 }}
+                >
+                    <motion.img src={instegramLogo} alt="Instagram Logo" className="hover:cursor-pointer w-16" whileHover={{ y: -2 }} />
+                </Link>
+            </div>
+
+            <div className='flex flex-1 justify-center ml-4 md:ml-0 top-2 translat-x-[-50%]'>
+                <Link to="/"
+                    className="flex items-center gap-2" onClick={() => {
+                        setActive(""); // tracking where we are on the page
+                        window.scrollTo(0, 0); //scrolling to the start of the page
+                    }}
+                >
+                    {/* Logo */}
+                    <Logo />
+                </Link>
+
+            </div>
+
+
+            <div className={`list-none hidden xl:flex xl:flex-1 xl:justify-end text-2xl text-${textColor}`}>
+
+                {categories.slice().reverse().map((category, index) => (
+                    <Link
+                        key={index}
+                        to={catId[index]} // Assuming your categories match the route names
+                        activeClass="active"
+                        spy={true}
+                        offset={-70}
+                        duration={500}
+                        className="hover:cursor-pointer relative group mx-4"
+                        onClick={() => setActive(catId[index])}
                     >
-                        <motion.img src={instegramLogo} alt="Instagram Logo" className="hover:cursor-pointer w-16" whileHover={{ y: -2 }} />
-                    </Link>
-                </div>
-
-                <div className={`list-none hidden xl:flex text-2xl text-${textColor}`}>
-
-                    {categories.slice().reverse().map((category, index) => (
-                        <Link
-                            key={index}
-                            to={catId[index]} // Assuming your categories match the route names
-                            activeClass="active"
-                            spy={true}
-                            offset={-70}
-                            duration={500}
-                            className="hover:cursor-pointer relative group mx-4"
-                            onClick={() => setActive(catId[index])}
-                        >
-                            {category}
-                            <span className={`h-[1px] inline-block w-0 bg-white  absolute left-0 -bottom-0.5
+                        {category}
+                        <span className={`h-[1px] inline-block w-0 bg-white  absolute left-0 -bottom-0.5
                       group-hover:w-full transition-[width] ease duration-300 
                      ${active === catId[index] ? 'w-full' : 'w-0'}`}>
-                                &nbsp;
-                            </span>
-                        </Link>
-                    ))}
-                </div>
-
-
-
-                <nav className='absolute left-[50%] top-2 translat-x-[-50%]'>
-                    <Link to="/"
-                        className="flex items-center gap-2" onClick={() => {
-                            setActive(""); // tracking where we are on the page
-                            window.scrollTo(0, 0); //scrolling to the start of the page
-                        }}
-                    >
-                        {/* Logo */}
-                        <Logo />
+                            &nbsp;
+                        </span>
                     </Link>
+                ))}
+            </div>
 
-                </nav>
-                {/* this div is for small devices*/}
 
-                <div className='xl:hidden flex flex-1 justify-end items-center  '>
-                    <img src={toggle ? close : menu} alt="menu" className='absolute z-10 w-[28px] h-[28px] object-contain cursor-pointer'
-                        // change the icon (menu/close) by clicking it (make the toggle change its value)
-                        onClick={() => setToggle(!toggle)} />
 
-                    {/* className={`overflow-hidden transition-max-height duration-300 ease-in-out flex primary-navigation ${
+
+            {/* this div is for small devices*/}
+
+            <div className='xl:hidden flex flex-1 justify-end items-center  '>
+                <img src={toggle ? close : menu} alt="menu" className='absolute z-10 w-[28px] h-[28px] object-contain cursor-pointer'
+                    // change the icon (menu/close) by clicking it (make the toggle change its value)
+                    onClick={() => setToggle(!toggle)} />
+
+                {/* className={`overflow-hidden transition-max-height duration-300 ease-in-out flex primary-navigation ${
           !toggle ? 'max-h-0' : 'max-h-screen'
         }`} */}
-                    <div className={`overflow-hidden transition ease-in duration-300 flex primary-navigation bg-${navBack}  ${!toggle ? 'translate-x-full' : 'translate-x-0'
-                        }`}>
-                        <Link to='home' className='cursor-pointer text-2xl font-semibold ' onClick={() => setToggle(!toggle)}>{categories[0]}</Link>
-                        <Link to='allProducts' className='cursor-pointer text-2xl font-semibold' onClick={() => setToggle(!toggle)}>{categories[1]}</Link>
-                        <Link to='testimonials' className='cursor-pointer text-2xl font-semibold' onClick={() => setToggle(!toggle)}>{categories[2]}</Link>
-                        <Link to='contact' className='cursor-pointer text-2xl font-semibold ' onClick={() => setToggle(!toggle)}>{categories[3]}</Link>
-
-                    </div>
+                <div className={`overflow-hidden transition ease-in duration-300 flex primary-navigation bg-dark  ${!toggle ? 'translate-x-full' : 'translate-x-0'
+                    }`}>
+                    <Link to='home' className='cursor-pointer text-2xl font-semibold ' onClick={() => setToggle(!toggle)}>{categories[0]}</Link>
+                    <Link to='allProducts' className='cursor-pointer text-2xl font-semibold' onClick={() => setToggle(!toggle)}>{categories[1]}</Link>
+                    <Link to='testimonials' className='cursor-pointer text-2xl font-semibold' onClick={() => setToggle(!toggle)}>{categories[2]}</Link>
+                    <Link to='contact' className='cursor-pointer text-2xl font-semibold ' onClick={() => setToggle(!toggle)}>{categories[3]}</Link>
 
                 </div>
 
+            </div>
 
-            </nav>
-        </>
+
+        </nav>
     );
 };
 

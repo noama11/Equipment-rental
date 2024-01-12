@@ -18,8 +18,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const SliderProducts = (classProps) => {
     return (
 
-        <div className={classProps}>
+        <div className="">
             <Swiper
+                spaceBetween={20}
                 grabCursor={true}
                 breakpoints={{
                     550: {
@@ -34,7 +35,7 @@ const SliderProducts = (classProps) => {
             >
                 {
                     productsBest.map((product, i) => (
-                        <SwiperSlide className="max-w-[265px]">
+                        <SwiperSlide className="max-w-[230px]  ">
                             <div>
 
                                 <ProductNew title={product.title} price={product.price} img={product.img} Id={i} />
@@ -51,7 +52,7 @@ const Products = () => {
     return (
         <div
             id="products"
-            className="flex flex-col gap-[128px] 2xl:gap-2  mt-[160px] 2xl:mt-[270px] mb-[160px] max-w-[1490px]
+            className="flex flex-col gap-[128px] 2xl:gap-2 py-12 2xl:mt-[270px]  max-w-[1490px]
           mx-auto px-10 w-full "
         >
             {/* <div className="hidden md:flex mx-auto md:flex-row gap-[160px] md:gap-6">
@@ -67,8 +68,8 @@ const Products = () => {
             </div> */}
             {/* <SliderProducts classProps={"hidden "} /> */}
 
-            <div className="">
-                <FadeIn delay={0.2} direction="left">
+            <div className="-mb-20 md:mb-0">
+                <FadeIn delay={0.2} direction="down">
                     <div className="flex flex-col">
                         <h1 className="text-center  text-fontBlack text-5xl lg:text-[64px] font-medium mb-6">
                             {productsTitle}

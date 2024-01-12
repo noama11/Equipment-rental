@@ -22,9 +22,9 @@
         --speed: 500ms;
     }
 
-    .section {
-        @apply py-[150px] xl:py-[70px];
-    }
+    /* .section {
+        @apply py-[100px] xl:py-[70px];
+    } */
 
     ul {
         list-style: none;
